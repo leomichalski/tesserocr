@@ -4,7 +4,7 @@
 # Main Libraries
 
 pytesseract (english and portuguese pre-installed)
-tesserocr (not available yet)
+tesserocr
 pdf2image
 
 Pillow
