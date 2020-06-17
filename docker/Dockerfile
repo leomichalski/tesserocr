@@ -4,7 +4,7 @@ ARG BASE_CONTAINER=jupyter/minimal-notebook
 FROM $BASE_CONTAINER
 # Maintainer of the base container: LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
-# Copyright (c) 2020, Leonardo M. Miranda All rights reserved.
+# Copyright (c) 2020, Leonardo M. Miranda.
 # Distributed under the terms of the Modified BSD License.
 USER root    
 RUN apt-get update \
