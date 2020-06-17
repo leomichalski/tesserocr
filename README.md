@@ -1,0 +1,47 @@
+### WARNING: This is not an API. If you want to do something with the Python libraries installed in the docker image, you need to code it yourself.
+
+```
+# Main Libraries
+
+pytesseract (english and portuguese pre-installed)
+tesserocr (not available yet)
+pdf2image
+
+Pillow
+opencv-contrib-python
+
+numpy
+pandas
+pyarrow
+```
+
+## How to install the docker image
+#### Make sure that you've installed docker. Before pulling ("downloading") the image, if you wish, you may check it at https://hub.docker.com/r/leommiranda/tesserocr. Then, pull the image from DockerHub with the following command. 
+
+```
+docker pull leommiranda/tesserocr
+```
+
+## How to run Jupyter Lab
+
+```
+docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v ${PWD}:/current_dir -w /current_dir leommiranda/tesserocr
+# Open one of the 3 server links that will appear in the terminal. I usually go with the last one.
+```
+
+## How to run a Python script
+
+```
+docker run --rm -v ${PWD}:/current_dir -w /current_dir leommiranda/tesserocr python [SCRIPT_NAME].py
+```
+
+## How to run multiple Python scripts
+
+```
+docker run -it --rm -v ${PWD}:/current_dir -w /current_dir leommiranda/tesserocr bash
+python [SCRIPT_NAME_1].py
+python [SCRIPT_NAME_2].py
+(...)
+```
+
+### (☞ﾟヮﾟ)☞
