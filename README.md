@@ -4,7 +4,7 @@
 #### Not Python
 
 ```
-tesseract-ocr (english and portuguese pre-installed)
+tesseract-ocr (english support pre-installed)
 tesseract-ocr-por (portuguese support)
 ```
 
