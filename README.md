@@ -1,9 +1,16 @@
 ### WARNING: This is not an API. If you want to do something with the Python libraries installed in the docker image, you need to code it yourself.
 
-```
-# Main Libraries
+## Main Libraries
+#### Not Python
 
-pytesseract (english and portuguese pre-installed)
+```
+tesseract-ocr (english and portuguese pre-installed)
+tesseract-ocr-por (portuguese support)
+```
+
+#### Python
+```
+pytesseract
 tesserocr
 pdf2image
 
