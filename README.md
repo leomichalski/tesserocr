@@ -23,10 +23,22 @@ pyarrow
 ```
 
 ## How to install the docker image
-#### Make sure that you've installed docker. Before pulling ("downloading") the image, if you wish, you may check it at https://hub.docker.com/r/leommiranda/tesserocr. Then, pull the image from DockerHub with the following command. 
 
+Option 1: pull the image from DockerHub. Before pulling ("downloading") the image, if you wish, you may check it at https://hub.docker.com/r/leommiranda/tesserocr. Then, pull the image from DockerHub with the following command. 
 ```
 docker pull leommiranda/tesserocr
+```
+
+Option 2: build the docker image by yourself. 
+```
+# clone the repository
+git clone https://github.com/leomichalski/tesserocr
+
+# change the current directory to the root folder of this repo
+cd tesserocr
+
+# build the docker image
+docker build . -t leommiranda/tesserocr -f docker/Dockerfile
 ```
 
 ## How to run Jupyter Lab
