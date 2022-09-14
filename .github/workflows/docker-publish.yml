@@ -1,0 +1,33 @@
+name: Docker
+
+on:
+  push:
+    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  docker-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Authenticate the Docker Hub user
+        uses: docker/login-action@v2.0.0
+        with:
+          username: leommiranda
+          password: ${{secrets.DOCKERHUB_PWD}}
+
+      - name: Build docker images and push them to Docker Hub
+        uses: docker/build-push-action@v3.1.1
+        with:
+          context: ./
+          file: ./docker/Dockerfile
+          push: true
+          tags: |
+            leommiranda/tesserocr:latest
+            leommiranda/tesserocr:${{github.run_number}}
